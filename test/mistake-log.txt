@@ -1,0 +1,6 @@
+#1 Details & Elements 
+- Find difficulties in changing the disclosure widget regarding selectors ( > ),
+wrong html syntax without any warning (detail vs details)
+- Pseudo-Elements, Pseudo-classes
+
+=> Keeping a page for testing is a good idea

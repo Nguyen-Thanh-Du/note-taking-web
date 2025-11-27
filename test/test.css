@@ -1,9 +1,5 @@
-/* Remove native triangle */
-.collapsible > summary::-webkit-details-marker {
-    display: none;
-  }
-  
-  .collapsible summary {
+
+ .collapsible summary {
     cursor: pointer;
     list-style: none;
     position: relative;

@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 800px;
+    height: 1200px;
 }
 
 .interface {
@@ -14,8 +14,8 @@ body {
     padding: 30px;
 
     border: 1px solid black;
-    width: 1000px;
-    height: 700px;
+    width: 1800px;
+    height: 1000px;
 }
 
 .nav-bar {
@@ -49,28 +49,29 @@ body {
     position: relative;
 }
 
-.collapsible summary {
+.collapsible > summary {
     cursor: pointer;
-    list-style: none;
-    padding-left: 1em;
-    
+    list-style: none;   /*Remove the default triangle disclosure widget*/
+    padding-left: 1em; /*Leave spaces for the arrow icon*/
 }
 
-.collapsible summary::before {
+.collapsible > summary::before {
+    /*Adjust the position of summary with regards to the collapsible box*/
     content: "";
     position: absolute;
     left: 0;
     top: 2px;
-
     width: 1em;
     height: 1em;
 
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    /* The chevron-right arrow*/
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' /%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     transition: transform 0.2s ease;
 }
 
-.collapsible[open] summary::before {
+.collapsible[open] > summary::before {
+    /*Rotate 90degree the arrow*/
     transform: rotate(90deg);
 }
 
