@@ -1,0 +1,33 @@
+/* Remove native triangle */
+.collapsible > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .collapsible summary {
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-left: 1.5rem; /* space for the icon */
+  }
+  
+  /* Icon container */
+  .collapsible summary::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+  
+    width: 1em;
+    height: 1em;
+  
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease;
+  }
+  
+  /* Rotate when open */
+  .collapsible[open] > summary::before {
+    transform: rotate(180deg);
+  }
+  
