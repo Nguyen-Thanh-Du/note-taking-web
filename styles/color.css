@@ -12,7 +12,7 @@ body {
     background-color: #262626;;
 }
 
-.collapsible:hover > summary {
+.collapsible > summary:hover {
     background-color: #343434;
 }
 
